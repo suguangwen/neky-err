@@ -23,7 +23,7 @@
     const Config = {
         method: method && method == 'GET' ? 'GET' : 'POST',
         url: url || '',
-        isSampling: true ? true : !!isSampling,
+        isSampling: isSampling ? true : !!isSampling,
         addErrData: addErrData
     }
 
