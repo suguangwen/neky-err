@@ -3,6 +3,13 @@ Front end anomaly capture.
 
 前端异常捕捉。
 
+```
+    JS异常监控,
+    资源异常监控,
+    XHR监控,
+    轻度可配置化
+```
+
 # 安装//Install
 
 ```npm
