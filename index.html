@@ -17,7 +17,7 @@
     let nekyError = nekyErr({ 
         url: 'http://localhost:8800/pwa', //接收报错信息地址
         method: 'GET', //请求类型 POST/GET 默认为POST 大写，如果写错了，自动使用POST
-        isSampling: false, //是否采样，本地错误信息会存储在本地，同样的错误不会多次发送请求 true / false 默认为true
+        isSampling: false, //是否采样，错误信息会存储在本地，同样的错误不会多次发送请求 true / false 默认为true
         addErrData: {}, //附加的数据，该数据会与报错信息一起传给后端，可用于记录一些业务数据
     })
     $.ajax({
