@@ -4,6 +4,7 @@
  *  MIT Licensed.
  */
 ;(function (root, nekyErr) {
+    
     if(typeof exports === 'object' && typeof module === 'object')
         module.exports = nekyErr()
     else if(typeof define === 'function' && define.amd)
@@ -76,6 +77,7 @@
             errUrl: stack
         }
     }
+    
     //错误信息组合
     let errorData = function (errorData) {
 
