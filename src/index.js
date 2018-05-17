@@ -23,7 +23,7 @@
     const Config = {
         method: method && method == 'GET' ? 'GET' : 'POST',
         url: url || '',
-        isSampling: isSampling ? !!isSampling : true,
+        isSampling: true ? true : !!isSampling,
         addErrData: addErrData
     }
 
@@ -105,7 +105,7 @@
 
     //判断错误信息是否重复
     let sampling = function (data) {
-
+        console.log(Config.isSampling)
         if (Config.isSampling) {
             if (allErrorData.indexOf(data.errCode) != -1) {
                 return true
