@@ -6,13 +6,13 @@
 ;(function (root, nekyErr) {
     
     if(typeof exports === 'object' && typeof module === 'object')
-        module.exports = nekyErr()
+        module.exports = nekyErr
     else if(typeof define === 'function' && define.amd)
         define([], nekyErr)
     else if(typeof exports === 'object')
-        exports["nekyErr"] = nekyErr()
+        exports["nekyErr"] = nekyErr
     else
-        root["nekyErr"] = nekyErr()
+        root["nekyErr"] = nekyErr
     
     if (window) window.nekyErr = nekyErr
 
