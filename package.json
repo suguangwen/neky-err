@@ -1,6 +1,6 @@
 {
   "name": "neky-err",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "前端异常捕捉",
   "main": "src/index.js",
   "repository": {
