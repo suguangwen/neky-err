@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./src/index.js"></script>
+    <!-- <script src="./src/index1.js"></script> -->
+    <!-- <script src="http://src.com/index1.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    let nekyError = nekyErr({ 
+        url: 'http://localhost:8800/pwa', //接收报错信息地址
+        method: 'GET', //请求类型 POST/GET 默认为POST 大写，如果写错了，自动使用POST
+        isSampling: false, //是否采样，错误信息会存储在本地，同样的错误不会多次发送请求 true / false 默认为true
+        addErrData: {}, //附加的数据，该数据会与报错信息一起传给后端，可用于记录一些业务数据
+    })
+    $.ajax({
+		url: 'https://cdn.bootcss.com/jquery/3.2.01/jquery.js',
+		type: 'GET',
+	})
+	.done(function() {
+		console.log("success");
+	})
+	.fail(function(error) {
+        console.log(error)
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+    });
+    try {
+        throw new Error('can not find it2');
+    } catch (err) {
+        nekyError.error(err)
+    }
+    let p = Promise.reject(new Error('throw error'));
+    setTimeout(()=>{
+        p.catch(e=>{console.log(1)});
+    },1000);
+
+    throw new Error("出错了！");
+    
+</script>
+</html>

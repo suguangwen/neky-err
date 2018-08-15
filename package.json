@@ -1,0 +1,12 @@
+{
+  "name": "neky-err",
+  "version": "1.0.1",
+  "description": "前端异常捕捉",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suguangwen/neky-err.git"
+  },
+  "author": "suguangwen",
+  "license": "MIT"
+}
